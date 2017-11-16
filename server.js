@@ -39,6 +39,11 @@ app.get("/bad", (req, res)=> {
     errorMessage: "This page does not exist"
   })
 })
+app.get('/projects', (req, res)=> {
+  res.render('projects.hbs', {
+    message: 'Portfolio Page here'
+  })
+})
 
 app.listen(PORT, ()=>{
   console.log(`Listening on port ${PORT}`)
